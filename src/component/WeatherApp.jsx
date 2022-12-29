@@ -31,6 +31,7 @@ const WeatherApp = () => {
   };
   return (
     <>
+    <h2 className="please">Search Please</h2>
       <div className="box1">
         <input
           className="input"
