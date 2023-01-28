@@ -1,34 +1,34 @@
-import React from "react";
-import { useState } from "react";
-import "./WeatherApp.css";
-import axios from "axios";
+import React from 'react'
+import { useState } from 'react'
+import './WeatherApp.css'
+import axios from 'axios'
 
 const WeatherApp = () => {
-  const [city, setCity] = useState("");
-  const [data, setData] = useState({});
-  const [weather, setWeather] = useState([]);
+  const [city, setCity] = useState('')
+  const [data, setData] = useState({})
+  const [weather, setWeather] = useState([])
   // const [temp, setTemp] = useState();
   const handleClick = (e) => {
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=38081323c5081e13ab9787ab61ae3007`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=38081323c5081e13ab9787ab61ae3007`,
       )
       .then((res) => {
         // console.log(res.data.weather[0].description);
-        setData(res.data);
+        setData(res.data)
         // const curr = ((temp - 32) * 5) / 9;
         // setTemp(curr);
-        setWeather(res.data.weather[0].description);
+        setWeather(res.data.weather[0].description)
       })
       .catch((error) => {
-        console.log(error);
-        setData(error);
+        console.log(error)
+        setData(error)
 
-        setCity("");
-        setData("");
-        e.preventDefault();
-      });
-  };
+        setCity('')
+        setData('')
+        e.preventDefault()
+      })
+  }
   return (
     <>
       <h2 className="please">Search Please</h2>
@@ -41,7 +41,7 @@ const WeatherApp = () => {
           name="city"
           value={city}
           onChange={(e) => {
-            setCity(e.target.value);
+            setCity(e.target.value)
           }}
         />
         <br />
@@ -90,7 +90,7 @@ const WeatherApp = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default WeatherApp;
+export default WeatherApp
