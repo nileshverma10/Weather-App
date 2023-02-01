@@ -19,7 +19,7 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-![Screenshot (4)](https://user-images.githubusercontent.com/100075212/215395393-86a340a8-da4f-48a7-b5c0-aba64df831a4.png)
+
 
 ### `npm run build`
 
